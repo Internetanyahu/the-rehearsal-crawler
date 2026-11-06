@@ -49,3 +49,10 @@ Optional variables: CRAWL_MAX_PAGES (default 40), CRAWL_DELAY_SECONDS (default 3
 Edit config/sources.json. Add a relevant index page to seed_urls and search phrases to search_queries. The crawler still applies robots.txt and access restrictions to every destination.
 
 All fetched pages and local input files are untrusted data. The scripts never execute content or follow instructions embedded in it.
+
+
+## Season 2 subtitle source
+
+A Season 2 source listing has been identified: [TVsubtitles — English subtitles](https://www.tvsubtitles.net/subtitle-3263-2-en.html). It lists six SRT files, one for each episode from S02E01 through S02E06. An alternate listing is [SUBDL — Season 2](https://subdl.com/subtitle/sd1636477/the-rehearsal/second-season).
+
+The repository records the source and episode coverage in `data/season2_subtitles.json` and `data/catalog.json`. The files themselves have not been downloaded or committed. Check the source site's terms and rights before obtaining or reusing subtitle files. To analyze files you are authorized to use, place them in `transcripts/inbox/` in Codespaces and run `python research.py`.

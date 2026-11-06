@@ -3,3 +3,9 @@ __pycache__/
 .venv/
 .env
 .DS_Store
+
+# Keep lawfully obtained transcript/subtitle source files out of the public repo.
+transcripts/inbox/*
+!transcripts/inbox/.gitkeep
+
+# Local analysis outputs can contain details derived from source files.

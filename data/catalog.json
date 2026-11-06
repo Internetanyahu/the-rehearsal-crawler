@@ -1,8 +1,20 @@
 {
   "schema_version": 1,
   "project": "The Rehearsal Archive",
-  "updated_at": "2026-11-06T05:35:14.441Z",
+  "updated_at": "2026-11-06T05:37:49+00:00",
   "items": [
+    {
+      "url": "https://www.tvmaze.com/shows/56116/the-rehearsal/episodeguide",
+      "canonical_url": "https://www.tvmaze.com/shows/56116/the-rehearsal/episodeguide",
+      "title": "The Rehearsal - Episode Guide | TVmaze",
+      "material_type": "episode_guide",
+      "confidence": 0.57,
+      "episode_hint": null,
+      "excerpt": "Episode: 1x01 | Airdate: Jul 15, 2022 (44 min) Nathan Fielder helps a Brooklyn-based trivia aficionado come clean to his teammate about a long-held lie.",
+      "content_sha256": "c5e433e2b3d3a10b6d35a508c6e32759fd84ba83f65ed501e3102fbc043975bf",
+      "first_seen": "2026-11-06T05:37:47+00:00",
+      "last_seen": "2026-11-06T05:37:47+00:00"
+    },
     {
       "url": "https://www.tvsubtitles.net/subtitle-3263-2-en.html",
       "canonical_url": "https://www.tvsubtitles.net/subtitle-3263-2-en.html",
@@ -24,6 +36,30 @@
       ],
       "language": "English",
       "source_status": "source_listing_verified_files_not_downloaded"
+    },
+    {
+      "url": "https://en.wikipedia.org/wiki/The_Rehearsal_(TV_series)",
+      "canonical_url": "https://en.wikipedia.org/wiki/The_Rehearsal_(TV_series)",
+      "title": "The Rehearsal (TV series) - Wikipedia",
+      "material_type": "transcript",
+      "confidence": 0.57,
+      "episode_hint": null,
+      "excerpt": "From Wikipedia, the free encyclopedia American comedy television series The Rehearsal Genre Comedy Created by Nathan Fielder Written by Nathan Fielder Carrie Kemper Eric Notarnicola Adam Locke-Norton Directed by Nathan Fielder Starring Nathan Fielder Country of origin United States Original language English No. of seasons 2 No. of episodes 12 Production Executive producers Nathan Fielder Christie Smith Clark Reinking Dan McManus Dave Paige Eric Notarnicola Running time 27–58 minutes Production c",
+      "content_sha256": "ec8bbf7ad9ec1391cf30957c6c7b7b2e39dc4e80bcecdb978a88985f03649f47",
+      "first_seen": "2026-11-06T05:37:48+00:00",
+      "last_seen": "2026-11-06T05:37:48+00:00"
+    },
+    {
+      "url": "https://transcripts.foreverdreaming.org/viewforum.php?f=1515",
+      "canonical_url": "https://transcripts.foreverdreaming.org/viewforum.php?f=1515",
+      "title": "The Rehearsal - Transcripts - Forever Dreaming",
+      "material_type": "transcript",
+      "confidence": 0.65,
+      "episode_hint": null,
+      "excerpt": "The Rehearsal Transcripts Skip to content × About Contact Copyright Privacy Shop FD Home × Board index TV Shows R The Rehearsal Ad blocker detected: Our website is made possible by showing ads to visitors. Please consider supporting us by disabling your ad blocker on our website. Welcome to our World! Where we serve you cookies to ensure you get the best viewing experience on our site. Did you know that you can remove censorship board-wide, use our advanced search functions, be notified when new",
+      "content_sha256": "e980a9c39d5040d832e1030319357f2df62cc565f4db6e05f0fcfeac84ba5740",
+      "first_seen": "2026-11-06T05:37:49+00:00",
+      "last_seen": "2026-11-06T05:37:49+00:00"
     }
   ]
 }

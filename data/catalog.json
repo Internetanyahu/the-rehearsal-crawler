@@ -1,6 +1,29 @@
 {
   "schema_version": 1,
   "project": "The Rehearsal Archive",
-  "updated_at": null,
-  "items": []
+  "updated_at": "2026-11-06T05:35:14.441Z",
+  "items": [
+    {
+      "url": "https://www.tvsubtitles.net/subtitle-3263-2-en.html",
+      "canonical_url": "https://www.tvsubtitles.net/subtitle-3263-2-en.html",
+      "title": "The Rehearsal Season 2 English subtitles — six episodes",
+      "material_type": "subtitle_collection",
+      "confidence": 0.99,
+      "episode_hint": "S02E01-S02E06",
+      "excerpt": "Source listing identifies six English SRT subtitle files covering all six Season 2 episodes. Metadata only; files not copied.",
+      "content_sha256": null,
+      "first_seen": "2026-11-06T05:35:14.445Z",
+      "last_seen": "2026-11-06T05:35:14.445Z",
+      "coverage": [
+        "S02E01",
+        "S02E02",
+        "S02E03",
+        "S02E04",
+        "S02E05",
+        "S02E06"
+      ],
+      "language": "English",
+      "source_status": "source_listing_verified_files_not_downloaded"
+    }
+  ]
 }

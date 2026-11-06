@@ -61,7 +61,12 @@ def analyze(path):
     if len(moments[topic])<12:
      n=int(cue["start"])
      moments[topic].append({"timestamp_seconds":n,"timestamp":f"{n//3600:02d}:{(n%3600)//60:02d}:{n%60:02d}"})
- return {"episode_id":get_episode_id(path.name),"source_file":path.name,"source_sha256":hashlib.sha256(path.read_bytes()).hexdigest(),"cue_count":len(cues),"duration_seconds":round(max(c["end"] for c in cues)),"speaker_labels":[{"label":k,"cue_count":v} for k,v in speakers.most_common(30)],"frequent_terms":[{"term":k,"count":v} for k,v in words.most_common(40)],"topic_counts":dict(topics.most_common()),"topic_timestamps":dict(moments),"raw_transcript_stored":False}
+ ends=[c["end"] for c in cues]
+ gaps=[max(0, round(cues[i]["start"]-cues[i-1]["end"], 3)) for i in range(1,len(cues))]
+ first=round(min(c["start"] for c in cues),3)
+ last=round(max(ends),3)
+ largest_gap=max(gaps,default=0)
+ return {"episode_id":get_episode_id(path.name),"source_file":path.name,"source_sha256":hashlib.sha256(path.read_bytes()).hexdigest(),"cue_count":len(cues),"first_timestamp_seconds":first,"last_timestamp_seconds":last,"duration_seconds":round(last),"largest_gap_seconds":largest_gap,"gaps_over_60_seconds":sum(g>60 for g in gaps),"speaker_labels":[{"label":k,"cue_count":v} for k,v in speakers.most_common(30)],"frequent_terms":[{"term":k,"count":v} for k,v in words.most_common(40)],"topic_counts":dict(topics.most_common()),"topic_timestamps":dict(moments),"raw_transcript_stored":False}
 def main():
  p=argparse.ArgumentParser(description="Index SRT/VTT/timestamped TXT files you are authorized to analyze.")
  p.add_argument("--input",type=Path,default=INBOX)

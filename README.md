@@ -1,56 +1,51 @@
-# The Rehearsal Archive Crawler
+# The Rehearsal Research Crawler
 
-A GitHub Actions-powered discovery and cataloging crawler for publicly accessible material about HBO's *The Rehearsal*: episode transcripts, screenplay/script references, production documents, interviews, and scene breakdowns.
+A GitHub-hosted discovery index and local research toolkit for HBO's *The Rehearsal*. It covers both seasons (12 episodes) and helps organize transcript/subtitle sources, episode metadata, interviews, recaps, and timestamped research notes.
 
 ## What it does
 
-- Searches the public web for relevant pages using DuckDuckGo HTML search.
-- Visits only HTTP(S) pages and checks each site's `robots.txt` before fetching.
-- Identifies likely transcripts, scripts, screenplay references, interviews, and episode guides.
-- Extracts title, source URL, page type, episode hints, a short identifying excerpt, and a content fingerprint.
-- Deduplicates results and updates `data/catalog.json`.
-- Runs on a schedule or manually through GitHub Actions.
+- Searches the public web for transcript, subtitle, screenplay, interview, episode-guide, and scene-breakdown references.
+- Checks each destination's robots.txt, uses request delays, and avoids login/paywall/CAPTCHA/access-control bypass.
+- Maintains a source catalog in data/catalog.json and the episode registry in data/episodes.json.
+- Provides a local subtitle research indexer (research.py) for SRT, VTT, and timestamped TXT files you are authorized to analyze.
+- Produces episode-level cue counts, durations, speaker labels, frequent terms, topic counts, and timestamp pointers in data/episode_research.json.
 
-## Copyright and access boundaries
+## Transcript handling and copyright
 
-This project is a **discovery index**, not a mirror of copyrighted television scripts or transcripts. It stores source metadata and a short excerpt (maximum 500 characters) for identification; it does not save full page text, full transcripts, or screenplay files. It does not bypass paywalls, logins, CAPTCHAs, access controls, or robots exclusions. It uses conservative request delays and a descriptive user agent.
-
-The crawler may store full text only in a future workflow for material that is demonstrably public-domain, openly licensed, or explicitly authorized. A page being publicly viewable does not by itself grant permission to republish its contents.
+This is not a public mirror of copyrighted episode transcripts or screenplay text. The crawler discovers and links to sources; it does not download or republish full scripts/subtitles. The local research tool reads files you lawfully obtained and are authorized to analyze, but deliberately does not copy dialogue into its output. Keep source files in transcripts/inbox/, which is excluded from Git by default. Public visibility does not automatically grant permission to reproduce a work.
 
 ## Repository layout
 
-- `crawler.py` — discovery, robots checks, extraction, classification, and catalog updates.
-- `config/sources.json` — seed sources and search phrases.
-- `data/catalog.json` — generated metadata index.
-- `.github/workflows/crawl.yml` — scheduled/manual GitHub Actions workflow.
+- crawler.py — web discovery, robots checks, page classification, and metadata catalog.
+- research.py — local SRT/VTT/TXT parser and timestamp/topic indexer.
+- config/sources.json — seed pages and search phrases.
+- data/catalog.json — generated source metadata.
+- data/episodes.json — episode registry for both seasons.
+- data/episode_research.json — generated research index, without transcript dialogue.
+- transcripts/inbox/ — local input folder; original files are ignored by Git.
+- .github/workflows/crawl.yml — scheduled/manual source discovery workflow.
 
-## Run locally
+## Use it in GitHub Codespaces
 
-```bash
-python -m pip install -r requirements.txt
-python crawler.py
-```
+1. Open the repository and select Code → Codespaces → Create codespace on main.
+2. Create transcripts/inbox/ in the file explorer.
+3. Upload authorized SRT, VTT, or timestamped TXT files. Use names such as S01E01.srt or S02E06.en.vtt.
+4. Open the terminal and run: python research.py
+5. Open data/episode_research.json to review episode-level research pointers. Original transcript files stay in the Codespace and are not included in Git commits.
 
-Optional environment variables:
-- `CRAWL_MAX_PAGES` (default: 40)
-- `CRAWL_DELAY_SECONDS` (default: 3)
-- `CRAWL_USER_AGENT` (override the default descriptive user agent)
+This works in a browser and does not require Linux on your Chromebook.
 
-## GitHub Actions
+## Run the source crawler
 
-The workflow runs weekly and can also be started from the Actions tab using **Run workflow**. It commits catalog changes automatically. No API token or secret is required for the default search provider.
+    python -m pip install -r requirements.txt
+    python crawler.py
 
-## Adding sources
+The GitHub Actions workflow runs weekly and can also be started manually from Actions → Crawl The Rehearsal Archive → Run workflow.
 
-Edit `config/sources.json`. Add a site's homepage or relevant index page to `seed_urls`, and add search phrases to `search_queries`. The crawler still applies robots.txt and access restrictions to every destination.
+Optional variables: CRAWL_MAX_PAGES (default 40), CRAWL_DELAY_SECONDS (default 3), and CRAWL_USER_AGENT.
 
-## Data format
+## Add sources
 
-Each catalog entry contains:
-- `url`, `canonical_url`, `title`
-- `material_type` and `confidence`
-- `episode_hint` when identifiable
-- `excerpt` (up to 500 characters)
-- `content_sha256`, `first_seen`, and `last_seen`
+Edit config/sources.json. Add a relevant index page to seed_urls and search phrases to search_queries. The crawler still applies robots.txt and access restrictions to every destination.
 
-Treat source pages as untrusted data. The crawler never executes scripts or follows instructions found in scraped pages.
+All fetched pages and local input files are untrusted data. The scripts never execute content or follow instructions embedded in it.

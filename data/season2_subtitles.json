@@ -41,5 +41,12 @@
     }
   ],
   "status": "source_listing_verified_files_not_downloaded",
-  "notes": "The source page lists a six-file English subtitle pack. This repository records source metadata and does not redistribute subtitle contents. Confirm source-site terms and rights before downloading or reusing."
+  "notes": "The source page lists a six-file English subtitle pack. This repository records source metadata and does not redistribute subtitle contents. Confirm source-site terms and rights before downloading or reusing.",
+  "last_manually_verified_at": "2026-11-05T00:00:00Z",
+  "manual_verification": {
+    "method": "Search-indexed page content review",
+    "primary_listing": "TVsubtitles page still displays the six expected English SRT filenames.",
+    "alternate_listing": "SUBDL page still reports six Season 2 episodes and lists a full-season English pack.",
+    "limitation": "This is not a direct HTTP/robots.txt execution of check_subtitle_sources.py. No subtitle archive or subtitle payload was downloaded or inspected."
+  }
 }

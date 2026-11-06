@@ -1,18 +1,23 @@
 {
   "seed_urls": [
     "https://www.hbo.com/the-rehearsal",
+    "https://www.tvmaze.com/shows/56116/the-rehearsal/episodeguide",
     "https://en.wikipedia.org/wiki/The_Rehearsal_(TV_series)",
     "https://www.imdb.com/title/tt10802170/"
   ],
   "search_queries": [
     "\"The Rehearsal\" transcript",
-    "\"The Rehearsal\" screenplay",
-    "\"The Rehearsal\" script PDF",
+    "\"The Rehearsal\" subtitles SRT",
+    "\"The Rehearsal\" subtitles VTT",
     "\"The Rehearsal\" episode transcript",
     "\"The Rehearsal\" dialogue transcript",
+    "\"The Rehearsal\" screenplay",
+    "\"The Rehearsal\" script PDF",
     "\"The Rehearsal\" production script",
+    "\"The Rehearsal\" season 1 transcript",
+    "\"The Rehearsal\" season 2 transcript",
     "Nathan Fielder The Rehearsal scene breakdown",
-    "The Rehearsal HBO interview script"
+    "The Rehearsal HBO interview writing production"
   ],
   "allowed_search_domains": [],
   "max_search_results_per_query": 8

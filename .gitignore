@@ -4,8 +4,12 @@ __pycache__/
 .env
 .DS_Store
 
-# Keep lawfully obtained transcript/subtitle source files out of the public repo.
+# Keep lawfully obtained subtitle source files out of the public repo.
 transcripts/inbox/*
 !transcripts/inbox/.gitkeep
+
+# Converted full-dialogue text files stay local as well.
+transcripts/plain_text/*
+!transcripts/plain_text/.gitkeep
 
 # Local analysis outputs can contain details derived from source files.

@@ -1,0 +1,45 @@
+{
+  "schema_version": 1,
+  "season": 2,
+  "series": "The Rehearsal",
+  "language": "English",
+  "material_type": "closed_captions_subtitles",
+  "source_name": "TVsubtitles",
+  "source_url": "https://www.tvsubtitles.net/subtitle-3263-2-en.html",
+  "alternate_source_url": "https://subdl.com/subtitle/sd1636477/the-rehearsal/second-season",
+  "coverage": "6 of 6 episodes listed",
+  "files": [
+    {
+      "episode_id": "S02E01",
+      "episode_title": "Gotta Have Fun",
+      "listed_filename": "The_Rehearsal - 2x01 - Gotta Have Fun.WEB.ETHEL.en.srt"
+    },
+    {
+      "episode_id": "S02E02",
+      "episode_title": "Star Potential",
+      "listed_filename": "The Rehearsal - 2x02 - Star Potential.WEB.AMZN.en.srt"
+    },
+    {
+      "episode_id": "S02E03",
+      "episode_title": "Pilot's Code",
+      "listed_filename": "The Rehearsal - 2x03 - Pilot's Code.WEB.AMZN.en.srt"
+    },
+    {
+      "episode_id": "S02E04",
+      "episode_title": "Kissme",
+      "listed_filename": "The Rehearsal - 2x04 - Kissme.WEB.AMZN.en.srt"
+    },
+    {
+      "episode_id": "S02E05",
+      "episode_title": "Washington",
+      "listed_filename": "The Rehearsal - 2x05 - Washington.WEB.AMZN.en.srt"
+    },
+    {
+      "episode_id": "S02E06",
+      "episode_title": "My Controls",
+      "listed_filename": "The Rehearsal - 2x06 - My Controls.WEB.AMZN.en.srt"
+    }
+  ],
+  "status": "source_listing_verified_files_not_downloaded",
+  "notes": "The source page lists a six-file English subtitle pack. This repository records source metadata and does not redistribute subtitle contents. Confirm source-site terms and rights before downloading or reusing."
+}

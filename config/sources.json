@@ -1,0 +1,19 @@
+{
+  "seed_urls": [
+    "https://www.hbo.com/the-rehearsal",
+    "https://en.wikipedia.org/wiki/The_Rehearsal_(TV_series)",
+    "https://www.imdb.com/title/tt10802170/"
+  ],
+  "search_queries": [
+    "\"The Rehearsal\" transcript",
+    "\"The Rehearsal\" screenplay",
+    "\"The Rehearsal\" script PDF",
+    "\"The Rehearsal\" episode transcript",
+    "\"The Rehearsal\" dialogue transcript",
+    "\"The Rehearsal\" production script",
+    "Nathan Fielder The Rehearsal scene breakdown",
+    "The Rehearsal HBO interview script"
+  ],
+  "allowed_search_domains": [],
+  "max_search_results_per_query": 8
+}

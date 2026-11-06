@@ -18,6 +18,7 @@ This is not a public mirror of copyrighted episode transcripts or screenplay tex
 
 - crawler.py — web discovery, robots checks, page classification, and metadata catalog.
 - research.py — local SRT/VTT/TXT parser and timestamp/topic indexer.
+- check_subtitle_sources.py — checks public subtitle listing pages and records episode-listing availability without fetching subtitle payloads.
 - config/sources.json — seed pages and search phrases.
 - data/catalog.json — generated source metadata.
 - data/episodes.json — episode registry for both seasons.
@@ -40,7 +41,7 @@ This works in a browser and does not require Linux on your Chromebook.
     python -m pip install -r requirements.txt
     python crawler.py
 
-The GitHub Actions workflow runs weekly and can also be started manually from Actions → Crawl The Rehearsal Archive → Run workflow.
+The GitHub Actions workflow runs weekly and can also be started manually from Actions → Crawl The Rehearsal Archive → Run workflow. It runs both the general source crawler and the subtitle-listing availability check.
 
 Optional variables: CRAWL_MAX_PAGES (default 40), CRAWL_DELAY_SECONDS (default 3), and CRAWL_USER_AGENT.
 
@@ -69,3 +70,15 @@ To inspect files you have lawfully obtained and are authorized to analyze:
 3. Run `python convert_subtitles.py` to create readable TXT copies in `transcripts/plain_text/`.
 
 Both the original subtitle folder and converted TXT folder are excluded from Git. The converter and analysis scripts are committed; full dialogue files are not. Timestamp checks can flag suspicious gaps or early endings, but comparison with the actual episode runtime and manual review are still needed to establish completeness.
+
+
+## Automated subtitle-source checks
+
+Run `python check_subtitle_sources.py` to check whether the configured primary and alternate Season 2 subtitle listing pages are reachable. The checker:
+
+- Requests only the HTML listing pages and checks each site's `robots.txt` first.
+- Confirms whether the primary listing still displays the six expected episode filenames.
+- Records HTTP status, final URL, check time, and episode coverage in `data/season2_subtitles.json`.
+- Does **not** open archive/download links or download SRT/VTT files.
+
+The weekly GitHub Actions workflow runs this check automatically and commits updated source-status metadata. You can also run it manually from the Actions tab. A reachable listing means only that the page and its episode entries are visible; it does not verify subtitle contents, completeness, or reuse rights.

@@ -56,3 +56,16 @@ All fetched pages and local input files are untrusted data. The scripts never ex
 A Season 2 source listing has been identified: [TVsubtitles — English subtitles](https://www.tvsubtitles.net/subtitle-3263-2-en.html). It lists six SRT files, one for each episode from S02E01 through S02E06. An alternate listing is [SUBDL — Season 2](https://subdl.com/subtitle/sd1636477/the-rehearsal/second-season).
 
 The repository records the source and episode coverage in `data/season2_subtitles.json` and `data/catalog.json`. The files themselves have not been downloaded or committed. Check the source site's terms and rights before obtaining or reusing subtitle files. To analyze files you are authorized to use, place them in `transcripts/inbox/` in Codespaces and run `python research.py`.
+
+
+## Season 2 subtitle files and TXT conversion
+
+The Season 2 subtitle index lists six English SRT files, one for each episode. This verifies episode listing coverage only; it does not prove the downloaded subtitle text is complete. See [TVsubtitles](https://www.tvsubtitles.net/subtitle-3263-2-en.html) and [SUBDL](https://subdl.com/subtitle/sd1636477/the-rehearsal/second-season).
+
+To inspect files you have lawfully obtained and are authorized to analyze:
+
+1. Put the six SRT files in `transcripts/inbox/` in Codespaces.
+2. Run `python research.py` to produce cue counts, first/last timestamps, and large-gap indicators.
+3. Run `python convert_subtitles.py` to create readable TXT copies in `transcripts/plain_text/`.
+
+Both the original subtitle folder and converted TXT folder are excluded from Git. The converter and analysis scripts are committed; full dialogue files are not. Timestamp checks can flag suspicious gaps or early endings, but comparison with the actual episode runtime and manual review are still needed to establish completeness.

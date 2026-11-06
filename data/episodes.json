@@ -1,0 +1,78 @@
+{
+  "schema_version": 1,
+  "series": "The Rehearsal",
+  "episode_count": 12,
+  "episode_list_source": "https://www.tvmaze.com/shows/56116/the-rehearsal/episodeguide",
+  "seasons": [
+    {
+      "season": 1,
+      "episodes": [
+        {
+          "id": "S01E01",
+          "title": "Orange Juice, No Pulp",
+          "air_date": "2022-07-15"
+        },
+        {
+          "id": "S01E02",
+          "title": "Scion",
+          "air_date": "2022-07-22"
+        },
+        {
+          "id": "S01E03",
+          "title": "Gold Digger",
+          "air_date": "2022-07-29"
+        },
+        {
+          "id": "S01E04",
+          "title": "The Fielder Method",
+          "air_date": "2022-08-05"
+        },
+        {
+          "id": "S01E05",
+          "title": "Apocalypto",
+          "air_date": "2022-08-12"
+        },
+        {
+          "id": "S01E06",
+          "title": "Pretend Daddy",
+          "air_date": "2022-08-19"
+        }
+      ]
+    },
+    {
+      "season": 2,
+      "episodes": [
+        {
+          "id": "S02E01",
+          "title": "Gotta Have Fun",
+          "air_date": "2025-04-20"
+        },
+        {
+          "id": "S02E02",
+          "title": "Star Potential",
+          "air_date": "2025-04-27"
+        },
+        {
+          "id": "S02E03",
+          "title": "Pilot's Code",
+          "air_date": "2025-05-04"
+        },
+        {
+          "id": "S02E04",
+          "title": "Kissme",
+          "air_date": "2025-05-11"
+        },
+        {
+          "id": "S02E05",
+          "title": "Washington",
+          "air_date": "2025-05-18"
+        },
+        {
+          "id": "S02E06",
+          "title": "My Controls",
+          "air_date": "2025-05-25"
+        }
+      ]
+    }
+  ]
+}

@@ -40,7 +40,7 @@
       "listed_filename": "The Rehearsal - 2x06 - My Controls.WEB.AMZN.en.srt"
     }
   ],
-  "status": "source_listing_verified_files_not_downloaded",
+  "status": "source_listing_reachable_partial_episode_listing_files_not_downloaded",
   "notes": "The source page lists a six-file English subtitle pack. This repository records source metadata and does not redistribute subtitle contents. Confirm source-site terms and rights before downloading or reusing.",
   "last_manually_verified_at": "2026-11-05T00:00:00Z",
   "manual_verification": {
@@ -48,5 +48,37 @@
     "primary_listing": "TVsubtitles page still displays the six expected English SRT filenames.",
     "alternate_listing": "SUBDL page still reports six Season 2 episodes and lists a full-season English pack.",
     "limitation": "This is not a direct HTTP/robots.txt execution of check_subtitle_sources.py. No subtitle archive or subtitle payload was downloaded or inspected."
-  }
+  },
+  "last_checked_at": "2026-11-09T19:53:44+00:00",
+  "source_checks": [
+    {
+      "status": "listing_partial",
+      "http_status": 200,
+      "checked_at": "2026-11-09T19:53:44+00:00",
+      "final_url": "https://www.tvsubtitles.net/subtitle-3263-2-en.html",
+      "content_type": "text/html",
+      "name": "TVsubtitles",
+      "role": "primary",
+      "url": "https://www.tvsubtitles.net/subtitle-3263-2-en.html",
+      "listed_episode_ids_found": [
+        "S02E02",
+        "S02E03",
+        "S02E04",
+        "S02E05",
+        "S02E06"
+      ],
+      "listed_episode_count_found": 5,
+      "expected_episode_count": 6
+    },
+    {
+      "status": "unavailable",
+      "http_status": 403,
+      "checked_at": "2026-11-09T19:53:44+00:00",
+      "final_url": "https://subdl.com/subtitle/sd1636477/the-rehearsal/second-season",
+      "detail": "listing page did not return HTTP 200",
+      "name": "Alternate source",
+      "role": "alternate",
+      "url": "https://subdl.com/subtitle/sd1636477/the-rehearsal/second-season"
+    }
+  ]
 }

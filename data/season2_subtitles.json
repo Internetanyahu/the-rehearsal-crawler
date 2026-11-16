@@ -49,12 +49,12 @@
     "alternate_listing": "SUBDL page still reports six Season 2 episodes and lists a full-season English pack.",
     "limitation": "This is not a direct HTTP/robots.txt execution of check_subtitle_sources.py. No subtitle archive or subtitle payload was downloaded or inspected."
   },
-  "last_checked_at": "2026-11-09T19:53:44+00:00",
+  "last_checked_at": "2026-11-16T19:40:44+00:00",
   "source_checks": [
     {
       "status": "listing_partial",
       "http_status": 200,
-      "checked_at": "2026-11-09T19:53:44+00:00",
+      "checked_at": "2026-11-16T19:40:43+00:00",
       "final_url": "https://www.tvsubtitles.net/subtitle-3263-2-en.html",
       "content_type": "text/html",
       "name": "TVsubtitles",
@@ -73,7 +73,7 @@
     {
       "status": "unavailable",
       "http_status": 403,
-      "checked_at": "2026-11-09T19:53:44+00:00",
+      "checked_at": "2026-11-16T19:40:44+00:00",
       "final_url": "https://subdl.com/subtitle/sd1636477/the-rehearsal/second-season",
       "detail": "listing page did not return HTTP 200",
       "name": "Alternate source",
